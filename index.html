@@ -16,21 +16,48 @@
     <title>SFU Shockwave</title>
     <link rel="shortcut icon" href="https://www.texasdragonboat.com/images/logo_tdba.png"/>
 
+    <style>
+      #loading {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: block;
+            z-index: 99;
+            opacity: 1;
+            background-color: #fff;
+        }
+
+        #loading-image {
+            display: block;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
   </head>
 
   <body>
-      <!-- NAV -->
-      <nav class="nav justify-content-center bg-light">  <!-- sticky-top -->
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#about-shockwave">About</a>
-        <a class="nav-link" href="pages/gallery.html">Gallery</a>
-        <a class="nav-link" href="#about-shockwave">Contact</a>
-      </nav>
+    <!-- LOADING IMAGE -->
+    <div class="mt-5" id="loading">
+      <img id="loading-image" src="assets/loading.gif" style="max-height: 200px; max-width: 200px;" />
+    </div>
+
+    <!-- NAV -->
+    <nav class="nav justify-content-center bg-light">  <!-- sticky-top -->
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#about-shockwave">About</a>
+      <a class="nav-link" href="pages/gallery.html">Gallery</a>
+      <a class="nav-link" href="#about-shockwave">Contact</a>
+    </nav>
       
-      <!-- CAROUSEL -->
+    <!-- CAROUSEL -->
+    <div class="container">
       <div id="carouselId" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
               <li data-target="#carouselId" data-slide-to="0" class="active"></li>
@@ -57,73 +84,78 @@
               <span class="sr-only">Next</span>
           </a>
       </div>
-
-      <!-- JUMBOTRON -->
-      <a id="about-shockwave"></a>
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-              <h1>SFU Shockwave Dragon Boat Team</h1>
-              <p class="lead">SFU Shockwave is a competitive dragon boat team. We aim to promote the sport of dragon boat paddling. We also welcome beginner paddlers and experienced paddlers alike.</p>
-              <hr class="my-2">
-              <p>For more information please contact us!</p>
-              <p class="lead">
-                  <a class="btn btn-primary" href="mailto:sfudb@sfu.ca" role="button" target="_blank"><i class="fas fa-envelope"></i> Contact</a>
-                  <a class="btn btn-info" href="https://forms.gle/yibC2CXuneFNaGjt8" role="button" target="_blank">feedback</a>
-              </p>
-          </div>
-      </div>
-
-      <!-- EVENTS -->
-      <div class="card-deck m-5">
-        <div class="card">
-          <img src="https://opcevenements.com/en/wp-content/uploads/sites/2/2020/07/b_opc-headerweb_ang.gif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dragon Boat Conference</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+    </div>
+    <!-- JUMBOTRON -->
+    <a id="about-shockwave"></a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1>SFU Shockwave Dragon Boat Team</h1>
+            <p class="lead">SFU Shockwave is a competitive dragon boat team. We aim to promote the sport of dragon boat paddling. We also welcome beginner paddlers and experienced paddlers alike.</p>
+            <hr class="my-2">
+            <p>For more information please contact us!</p>
+            <p class="lead">
+                <a class="btn btn-primary" href="mailto:sfudb@sfu.ca" role="button" target="_blank"><i class="fas fa-envelope"></i> Contact</a>
+                <a class="btn btn-info" href="https://forms.gle/yibC2CXuneFNaGjt8" role="button" target="_blank">feedback</a>
+            </p>
         </div>
-        <div class="card">
-          <img src="https://cdna.artstation.com/p/assets/images/images/024/538/828/original/pixel-jeff-clipc-s.gif?1582740521" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Pub Night</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2e9d8af9-658a-45e7-93de-f2c7f76c6e7f/dbnb6gh-c63153e2-64c8-4d81-96c0-ce76a3e001f3.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMmU5ZDhhZjktNjU4YS00NWU3LTkzZGUtZjJjN2Y3NmM2ZTdmXC9kYm5iNmdoLWM2MzE1M2UyLTY0YzgtNGQ4MS05NmMwLWNlNzZhM2UwMDFmMy5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.bUPRXtYEv8PUjN1oFRcYHRNYi_5lDoXYc0R1kzMN2cg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Steavson Race</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="card-deck m-5">
+      <div class="card">
+        <img src="https://opcevenements.com/en/wp-content/uploads/sites/2/2020/07/b_opc-headerweb_ang.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dragon Boat Conference</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
-
-      <br>
-      <br>
-
-      <!-- JUMBOTRON -->
-      <a id="about-shockwave"></a>
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-              <iframe width="540" height="500" src="https://de60444c.sibforms.com/serve/MUIEAADKFYq6rPIc9LN-xdzUBetH78vCjMhnDsiQKlLkoWkf9BFtIxgTadCPdM8OfunF9g6Ekd8wtrTN5XhdNz9_WrVC85srRN9o_lK1xS_lmw51GKQnuDx-hIxUjSLkCuCOrC0tKZ3_bg_YrG4PwfI4TJygIaYQRXNxFA2uZvRVZy5biIB-L0x79-vWCPP2s5ip2_yJDoAv5uQd" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-          </div>
+      <div class="card">
+        <img src="https://cdna.artstation.com/p/assets/images/images/024/538/828/original/pixel-jeff-clipc-s.gif?1582740521" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pub Night</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
       </div>
+      <div class="card">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2e9d8af9-658a-45e7-93de-f2c7f76c6e7f/dbnb6gh-c63153e2-64c8-4d81-96c0-ce76a3e001f3.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMmU5ZDhhZjktNjU4YS00NWU3LTkzZGUtZjJjN2Y3NmM2ZTdmXC9kYm5iNmdoLWM2MzE1M2UyLTY0YzgtNGQ4MS05NmMwLWNlNzZhM2UwMDFmMy5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.bUPRXtYEv8PUjN1oFRcYHRNYi_5lDoXYc0R1kzMN2cg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Steavson Race</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
 
-      <br>
-      <!-- FOOTER -->
-      <nav class="navbar fixed-bottom justify-content-center bg-light">
-        <a class="nav-link" href="https://www.facebook.com/sfushockwave" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a class="nav-link" href="https://www.instagram.com/sfushockwave" target="_blank"><i class="fab fa-instagram-square"></i></a>
-        <a class="nav-link" href="mailto:sfudb@sfu.ca"><i class="fas fa-envelope"></i></a>
-      </nav>
+    <br>
+    <br>
+
+    <!-- JUMBOTRON -->
+    <a id="about-shockwave"></a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <iframe width="540" height="500" src="https://de60444c.sibforms.com/serve/MUIEAADKFYq6rPIc9LN-xdzUBetH78vCjMhnDsiQKlLkoWkf9BFtIxgTadCPdM8OfunF9g6Ekd8wtrTN5XhdNz9_WrVC85srRN9o_lK1xS_lmw51GKQnuDx-hIxUjSLkCuCOrC0tKZ3_bg_YrG4PwfI4TJygIaYQRXNxFA2uZvRVZy5biIB-L0x79-vWCPP2s5ip2_yJDoAv5uQd" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+        </div>
+    </div>
+
+    <br>
+    <!-- FOOTER -->
+    <nav class="navbar fixed-bottom justify-content-center bg-light">
+      <a class="nav-link" href="https://www.facebook.com/sfushockwave" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a class="nav-link" href="https://www.instagram.com/sfushockwave" target="_blank"><i class="fab fa-instagram-square"></i></a>
+      <a class="nav-link" href="mailto:sfudb@sfu.ca"><i class="fas fa-envelope"></i></a>
+    </nav>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery.3.5.1.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- LOADING PAGE ICON -->
+    <script>
+      window.onload = function(){ document.getElementById("loading").style.display = "none" }
+    </script>
   </body>
 </html>
