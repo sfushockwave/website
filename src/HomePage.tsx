@@ -7,6 +7,7 @@ import {
   useColorModeValue,
   chakra,
   VisuallyHidden,
+  Button,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { FaInstagram, FaFacebook, FaRegEnvelope } from "react-icons/fa";
@@ -34,8 +35,9 @@ const SocialButton = ({
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("orange.200", "whiteAlpha.200"),
+        bg: useColorModeValue("orange.400", "whiteAlpha.200"),
       }}
+      target="_blank"
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -48,7 +50,7 @@ export default function HomePage() {
     <Flex
       w={"full"}
       h={"100vh"}
-      backgroundImage="/dragonboathero.jpg"
+      backgroundImage={process.env.PUBLIC_URL + "/dragonboathero.jpg"}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
@@ -63,21 +65,34 @@ export default function HomePage() {
             color={"white"}
             fontWeight={700}
             lineHeight={1}
-            fontSize={useBreakpointValue({ base: "4xl", md: "5xl" })}
+            fontSize={useBreakpointValue({ base: "2xl", md: "6xl" })}
+            fontFamily='Bebas Neue'
           >
-            Alone we can do so little; Together we can do so much. Join SFU
-            Shockwave Dragon Boating Team
+            Alone we can do so little; Together we can do so much.
           </Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Instagram"} href={"https://www.instagram.com/sfushockwave"}>
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/sfushockwave"}
+            >
               <FaInstagram />
             </SocialButton>
-            <SocialButton label={"Facebook"} href={"https://www.facebook.com/sfushockwave"}>
+            <SocialButton
+              label={"Facebook"}
+              href={"https://www.facebook.com/sfushockwave"}
+            >
               <FaFacebook />
             </SocialButton>
             <SocialButton label={"Mail"} href={"mailto:sfudb@sfu.ca"}>
               <FaRegEnvelope />
             </SocialButton>
+            <Button
+              bg={'whiteAlpha.500'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'orange.500' }}>
+              coming soon...
+            </Button>
           </Stack>
         </Stack>
       </VStack>
