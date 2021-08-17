@@ -35,7 +35,7 @@ const SocialButton = ({
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("orange.400", "whiteAlpha.200"),
+        bg: useColorModeValue("red.500", "whiteAlpha.200"),
       }}
       target="_blank"
     >
@@ -66,7 +66,7 @@ export default function HomePage() {
             fontWeight={700}
             lineHeight={1}
             fontSize={useBreakpointValue({ base: "2xl", md: "6xl" })}
-            fontFamily='Bebas Neue'
+            fontFamily="Bebas Neue"
           >
             Alone we can do so little; Together we can do so much.
           </Text>
@@ -87,11 +87,12 @@ export default function HomePage() {
               <FaRegEnvelope />
             </SocialButton>
             <Button
-              bg={'whiteAlpha.500'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'orange.500' }}>
-              coming soon...
+              bg={"orange.500"}
+              rounded={"full"}
+              color={"white"}
+              _hover={{ bg: "red.500" }}
+            >
+              <a href="https://forms.gle/Rh4hPq5EnBPgWga97" target="b_lank">Join the team!</a>
             </Button>
           </Stack>
         </Stack>
