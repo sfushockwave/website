@@ -10,7 +10,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
-import { FaInstagram, FaFacebook, FaRegEnvelope } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaRegEnvelope, FaDiscord } from "react-icons/fa";
 
 const SocialButton = ({
   children,
@@ -82,6 +82,12 @@ export default function HomePage() {
               href={"https://www.facebook.com/sfushockwave"}
             >
               <FaFacebook />
+            </SocialButton>
+            <SocialButton
+              label={"Discord"}
+              href={"https://discord.gg/mV4gb7bW"}
+            >
+              <FaDiscord />
             </SocialButton>
             <SocialButton label={"Mail"} href={"mailto:sfudb@sfu.ca"}>
               <FaRegEnvelope />
